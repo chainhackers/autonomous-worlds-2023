@@ -1,3 +1,11 @@
+export enum Direction {
+  Unknown,
+  Up,
+  Down,
+  Left,
+  Right
+}
+
 export enum Scenes {
   Main = "Main",
 }
