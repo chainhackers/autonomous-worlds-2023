@@ -5,7 +5,7 @@ importers:
   .:
     devDependencies:
       '@latticexyz/cli':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(@ethersproject/bytes@5.7.0)(google-protobuf@3.21.2)
       '@typescript-eslint/eslint-plugin':
         specifier: 5.46.1
@@ -74,34 +74,34 @@ importers:
         specifier: ^5.7.2
         version: 5.7.2
       '@latticexyz/common':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(typescript@5.0.4)(zod@3.21.4)
       '@latticexyz/dev-tools':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(@latticexyz/network@2.0.0-alpha.1.177)(@latticexyz/std-client@2.0.0-alpha.1.177)(@latticexyz/utils@2.0.0-alpha.1.177)(@latticexyz/world@2.0.0-alpha.1.177)(typescript@5.0.4)(zod@3.21.4)
       '@latticexyz/network':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(google-protobuf@3.21.2)(typescript@5.0.4)(zod@3.21.4)
       '@latticexyz/phaserx':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177
       '@latticexyz/react':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(typescript@5.0.4)(zod@3.21.4)
       '@latticexyz/recs':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(typescript@5.0.4)(zod@3.21.4)
       '@latticexyz/schema-type':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(typescript@5.0.4)(zod@3.21.4)
       '@latticexyz/std-client':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(@ethersproject/bytes@5.7.0)(google-protobuf@3.21.2)(typescript@5.0.4)(zod@3.21.4)
       '@latticexyz/utils':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177
       '@latticexyz/world':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(typescript@5.0.4)
       '@wagmi/chains':
         specifier: ^0.2.14
@@ -174,19 +174,19 @@ importers:
         specifier: ^5.7.2
         version: 5.7.2
       '@latticexyz/cli':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(@ethersproject/bytes@5.7.0)(google-protobuf@3.21.2)
       '@latticexyz/schema-type':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(typescript@5.0.4)(zod@3.21.4)
       '@latticexyz/std-contracts':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177
       '@latticexyz/store':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(typescript@5.0.4)
       '@latticexyz/world':
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177(typescript@5.0.4)
       ethers:
         specifier: ^5.7.2
@@ -214,7 +214,7 @@ importers:
         specifier: ^3.3.7
         version: 3.3.7
       solhint-plugin-mud:
-        specifier: 2.0.0-alpha.1.177+5ec509dd
+        specifier: 2.0.0-alpha.1.183
         version: 2.0.0-alpha.1.177
       typechain:
         specifier: ^8.1.1
