@@ -8,13 +8,13 @@ import {Position, PositionTableId} from "../codegen/Tables.sol";
 contract MapSystem is System {
 
     function cellInhabitant(int32 x, int32 y) public view returns (bytes32 result){
-//        bytes32[] memory inhabitants = getKeysWithValue(
-//            PositionTableId,
-//            Position.encode(x, y)
-//        );
-        result = bytes32(uint256(1));
-//        if (inhabitants.length > 0) {
-//            result = inhabitants[0];
-//        }
+       bytes32[] memory inhabitants = getKeysWithValue(
+           PositionTableId,
+           Position.encode(x, y)
+       );
+       result = 0;
+       if (inhabitants.length > 0) {
+           result = inhabitants[0];
+       }
     }
 }
