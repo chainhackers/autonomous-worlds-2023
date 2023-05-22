@@ -45,25 +45,34 @@ export const phaserConfig = {
             imagePath: "/assets/atlases/",
           },
         },
+        [Assets.Player]: {
+          type: AssetType.Image,
+          key: Assets.Player,
+          path: "/assets/sprites/player.png",
+        },
       },
       maps: {
         [Maps.Main]: mainMap,
       },
       sprites: {
-        [Sprites.Soldier]: {
+        [Sprites.Golem]: {
           assetKey: Assets.MainAtlas,
-          frame: "sprites/soldier/idle/0.png",
+          frame: "sprites/golem/idle/0.png",
+        },
+        [Sprites.Player]: {
+          assetKey: Assets.Player,
+          frame: "sprites/player/idle/0.png",
         },
       },
       animations: [
         {
-          key: Animations.SwordsmanIdle,
+          key: Animations.GolemIdle,
           assetKey: Assets.MainAtlas,
           startFrame: 0,
-          endFrame: 3,
+          endFrame: 4,
           frameRate: 6,
           repeat: -1,
-          prefix: "sprites/soldier/idle/",
+          prefix: "sprites/golem/idle/",
           suffix: ".png",
         },
       ],
