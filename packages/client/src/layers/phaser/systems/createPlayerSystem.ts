@@ -44,7 +44,7 @@ export function createPlayerSystem(layer: PhaserLayer) {
             id: "sprite",
             once: (sprite) => {
                 sprite.setTexture(Assets.Player);
-                //sprite.setDisplaySize(TILE_WIDTH, TILE_HEIGHT);
+                sprite.setDisplaySize(TILE_WIDTH, TILE_HEIGHT);
                 //sprite.setScale(1);
             }
         })

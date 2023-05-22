@@ -26,7 +26,8 @@ export enum Assets {
   MainAtlas = "MainAtlas",
   Tileset = "Tileset",
   Player = "Player",
+  Tile = "Tile",
 }
 
-export const TILE_HEIGHT = 32;
-export const TILE_WIDTH = 32;
+export const TILE_HEIGHT = 64;
+export const TILE_WIDTH = 64;
