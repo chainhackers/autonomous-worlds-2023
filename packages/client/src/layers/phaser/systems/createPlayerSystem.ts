@@ -2,6 +2,7 @@ import {Has, defineEnterSystem, defineExitSystem, defineSystem, getComponentValu
 import {pixelCoordToTileCoord, tileCoordToPixelCoord} from "@latticexyz/phaserx"
 import {PhaserLayer} from "../createPhaserLayer";
 import {TILE_HEIGHT, TILE_WIDTH} from "../constants";
+import { Assets, Animations } from "../constants";
 
 export function createPlayerSystem(layer: PhaserLayer) {
     const {
@@ -36,13 +37,15 @@ export function createPlayerSystem(layer: PhaserLayer) {
     })
 
     defineEnterSystem(world, [Has(Position)], ({entity}) => {
-        const playerObj = objectPool.get(entity, "Rectangle");
-
+        const playerObj = objectPool.get(entity, "Sprite");
+        
+        // view player sprite (not animated)
         playerObj.setComponent({
-            id: "animation",
-            once: (rect) => {
-                rect.setSize(TILE_WIDTH, TILE_HEIGHT);
-                rect.setFillStyle(0xE34234);
+            id: "sprite",
+            once: (sprite) => {
+                sprite.setTexture(Assets.Player);
+                //sprite.setDisplaySize(TILE_WIDTH, TILE_HEIGHT);
+                //sprite.setScale(1);
             }
         })
     })
@@ -63,11 +66,11 @@ export function createPlayerSystem(layer: PhaserLayer) {
         const position = getComponentValueStrict(Position, entity);
         const pixelPosition = tileCoordToPixelCoord(position, TILE_HEIGHT, TILE_WIDTH);
 
-        const playerObj = objectPool.get(entity, "Rectangle");
+        const playerObj = objectPool.get(entity, "Sprite");
         playerObj.setComponent({
             id: "position",
-            once: (rect) => {
-                rect.setPosition(pixelPosition.x, pixelPosition.y);
+            once: (sprite) => {
+                sprite.setPosition(pixelPosition.x, pixelPosition.y);
             }
         })
     })

@@ -15,15 +15,17 @@ export enum Maps {
 }
 
 export enum Animations {
-  SwordsmanIdle = "SwordsmanIdle",
+  GolemIdle = "GolemIdle",
 }
 export enum Sprites {
-  Soldier,
+  Golem,
+  Player,
 }
 
 export enum Assets {
   MainAtlas = "MainAtlas",
   Tileset = "Tileset",
+  Player = "Player",
 }
 
 export const TILE_HEIGHT = 32;
