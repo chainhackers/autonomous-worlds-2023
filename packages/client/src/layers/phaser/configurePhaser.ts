@@ -31,11 +31,11 @@ export const phaserConfig = {
   sceneConfig: {
     [Scenes.Main]: defineSceneConfig({
       assets: {
-        [Assets.Tileset]: {
-          type: AssetType.Image,
-          key: Assets.Tileset,
-          path: worldTileset,
-        },
+        // [Assets.Tileset]: {
+        //   type: AssetType.Image,
+        //   key: Assets.Tileset,
+        //   path: worldTileset,
+        // },
         [Assets.MainAtlas]: {
           type: AssetType.MultiAtlas,
           key: Assets.MainAtlas,
@@ -49,6 +49,11 @@ export const phaserConfig = {
           type: AssetType.Image,
           key: Assets.Player,
           path: "/assets/sprites/player.png",
+        },
+        [Assets.Tile]: {
+          type: AssetType.Image,
+          key: Assets.Tile,
+          path: "/assets/sprites/tile.png",
         },
       },
       maps: {
@@ -78,7 +83,7 @@ export const phaserConfig = {
       ],
       tilesets: {
         Default: {
-          assetKey: Assets.Tileset,
+          assetKey: Assets.Tile,
           tileWidth: TILE_WIDTH,
           tileHeight: TILE_HEIGHT,
         },
