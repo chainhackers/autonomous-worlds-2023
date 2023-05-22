@@ -14,8 +14,12 @@ export function createSystemCalls(
     await awaitStreamValue(txReduced$, (txHash) => txHash === tx.hash);
     return getComponentValue(Counter, singletonEntity);
   };
+  const spawn = async (x: number, y: number) => {
+    await worldSend("spawn", [x, y]);
+  }
 
   return {
     increment,
+    spawn
   };
 }
