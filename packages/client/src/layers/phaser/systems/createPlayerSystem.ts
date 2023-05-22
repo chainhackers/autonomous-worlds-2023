@@ -1,4 +1,4 @@
-import {Has, defineEnterSystem, defineSystem, getComponentValueStrict} from "@latticexyz/recs"
+import {Has, defineEnterSystem, defineExitSystem, defineSystem, getComponentValueStrict} from "@latticexyz/recs"
 import {pixelCoordToTileCoord, tileCoordToPixelCoord} from "@latticexyz/phaserx"
 import {PhaserLayer} from "../createPhaserLayer";
 import {TILE_HEIGHT, TILE_WIDTH} from "../constants";
@@ -43,6 +43,18 @@ export function createPlayerSystem(layer: PhaserLayer) {
             once: (rect) => {
                 rect.setSize(TILE_WIDTH, TILE_HEIGHT);
                 rect.setFillStyle(0xE34234);
+            }
+        })
+    })
+
+    defineExitSystem(world, [Has(Position)], ({entity}) => {
+        const playerObj = objectPool.get(entity, "Rectangle");
+
+        playerObj.setComponent({
+            id: "animation",
+            once: (rect) => {
+                rect.setSize(TILE_WIDTH, TILE_HEIGHT);
+                rect.setFillStyle(0x000000);
             }
         })
     })

@@ -11,6 +11,7 @@ export function createControlsSystem(layer: PhaserLayer) {
         networkLayer: {
             systemCalls: {
                 move,
+                die
             },
         },
     } = layer;
@@ -39,6 +40,13 @@ export function createControlsSystem(layer: PhaserLayer) {
         keys => keys.has("D"),
         () => {
             move(Direction.Right);
+        }
+    );
+
+    input.onKeyPress(
+        keys => keys.has("Q"),
+        () => {
+            die();
         }
     );
 }

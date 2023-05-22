@@ -23,9 +23,14 @@ export function createSystemCalls(
     await worldSend("move", [direction]);
   }
 
+  const die = async () => {
+    await worldSend("die", []);
+  }
+
   return {
     increment,
     spawn,
-    move
+    move,
+    die
   };
 }

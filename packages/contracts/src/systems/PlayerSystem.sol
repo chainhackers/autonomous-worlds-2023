@@ -5,9 +5,9 @@ import {System} from "@latticexyz/world/src/System.sol";
 import {addressToEntity} from "@latticexyz/solecs/src/utils.sol";
 import {getKeysWithValue} from "@latticexyz/world/src/modules/keyswithvalue/getKeysWithValue.sol";
 
-import {
-Position
-} from "../codegen/Tables.sol";
+import {IWorld} from "../codegen/world/IWorld.sol";
+import {Position} from "../codegen/Tables.sol";
+
 
 import {Direction} from "../codegen/Types.sol";
 
@@ -17,6 +17,11 @@ contract PlayerSystem is System {
         bytes32 player = bytes32(addressToEntity(_msgSender()));
 
         Position.set(player, x, y);
+    }
+
+    function die() public {
+        bytes32 player = bytes32(addressToEntity(_msgSender()));
+        Position.deleteRecord(player);
     }
 
     function move(Direction direction) public {
@@ -33,6 +38,11 @@ contract PlayerSystem is System {
         } else if (direction == Direction.Right) {
             nextX++;
         }
-        Position.set(player, nextX, nextY);
+
+        if (IWorld(_world()).cellInhabitant(nextX, nextY) > 0) {
+            die();
+        } else {
+            Position.set(player, nextX, nextY);
+        }
     }
 }
